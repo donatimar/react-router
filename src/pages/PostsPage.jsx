@@ -30,14 +30,23 @@ export default function PostsPage() {
   return (
     <div className="container py-5">
       <h1>Lista dei post</h1>
-      <ul>
+      <div className="row">
         {posts.map((post) => (
-          <li key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-          </li>
+          <div className="col-md-4" key={post.id}>
+            <div className="card" style={{ width: "300px" }}>
+              <img
+                src="https://via.placeholder.com/150"
+                className="card-img-top"
+                alt="Post Image"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{post.title}</h5>
+                <p className="card-text">{post.content}</p>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
