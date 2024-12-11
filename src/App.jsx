@@ -7,6 +7,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
+import PostDetailPage from "./pages/PostDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" Component={HomePage} />
           <Route path="/about" Component={AboutPage} />
           <Route path="/posts" Component={PostsPage} />
+          <Route path="/posts/:postId" Component={PostDetailPage} />
           <Route path="*" Component={NotFoundPage} />
         </Route>
       </Routes>
