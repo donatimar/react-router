@@ -28,12 +28,12 @@ export default function PostsPage() {
   }
 
   return (
-    <div className="container py-5">
-      <h1>Lista dei post</h1>
+    <div className="container py-5 ">
+      <h1 className="mb-5">LISTA DEI POST</h1>
       <div className="row">
         {posts.map((post) => (
-          <div className="col-md-4" key={post.id}>
-            <div className="card" style={{ width: "300px" }}>
+          <div className="col-12 col-sm-6 col-md-4" key={post.id}>
+            <div className="card" style={{ width: "100%", maxWidth: "300px" }}>
               <img
                 src="https://via.placeholder.com/150"
                 className="card-img-top"
