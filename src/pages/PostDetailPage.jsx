@@ -34,8 +34,25 @@ export default function PostDetailPage() {
 
   return (
     <div className="container py-5">
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      <h1 className="mb-5">Dettaglio del Post</h1>
+      <div className="row justify-content-center">
+        <div className="col-12 col-sm-6 col-md-4">
+          <div className="card" style={{ width: "100%", maxWidth: "300px" }}>
+            <img
+              src="https://via.placeholder.com/150"
+              className="card-img-top"
+              alt="Post Image"
+            />
+            <div className="card-body">
+              <h5 className="card-title">{post.title}</h5>
+              <p className="card-text">{post.content}</p>
+              <div className="d-flex justify-content-between">
+                <button className="btn btn-primary mt-3">Leggi di più</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
